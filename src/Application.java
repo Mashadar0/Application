@@ -10,11 +10,7 @@ public class Application {
         System.out.println("Cat " + cat1.getName() + " weighs " + cat1.getWeigh());
         cat1.liveAnotherDay();
 
-        if (cat1.getMeow() == cat2.getMeow()){
-            System.out.println("Cats meow the same");
-        } else {
-            System.out.println("Cats meow don't same");
-        }
+        cat1.compareMeow(cat1, cat2);
 
         System.out.println(cat1.getCount() + " cats was created");
     }

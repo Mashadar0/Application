@@ -45,9 +45,10 @@ public class Kotik {
 
     public void liveAnotherDay(){
         for (int i = 0; i < 24; i++){
+            System.out.print(i + "  ");
             switch ((int) (Math.random()*5 + 1)){
                 case 1:
-                    if (play() == true) {
+                    if (play()) {
                         System.out.println("Cat play");
                     } else {
                         System.out.print("Cat don't play. ");
@@ -55,7 +56,7 @@ public class Kotik {
                     }
                     break;
                 case 2:
-                    if (sleep() == true) {
+                    if (sleep()) {
                         System.out.println("Cat sleep");
                     } else {
                         System.out.print("Cat don't sleep. ");
@@ -63,7 +64,7 @@ public class Kotik {
                     }
                     break;
                 case 3:
-                    if (chaseMouse() == true) {
+                    if (chaseMouse()) {
                         System.out.println("Cat chase Mouse");
                     } else {
                         System.out.print("Cat don't chase Mouse. ");
@@ -71,7 +72,7 @@ public class Kotik {
                     }
                     break;
                 case 4:
-                    if (lookInWindow() == true) {
+                    if (lookInWindow()) {
                         System.out.println("Cat look In Window");
                     } else {
                         System.out.print("Cat don't look In Window. ");
@@ -124,5 +125,13 @@ public class Kotik {
     private void eat(int n, String foodName){
         fullness += n;
         System.out.println("Cat eat " + foodName);
+    }
+
+    public void compareMeow(Kotik cat1, Kotik cat2){
+        if (cat1.meow.equals(cat2.meow)){
+            System.out.println("Cats meow the same");
+        } else {
+            System.out.println("Cats meow don't same");
+        }
     }
 }
